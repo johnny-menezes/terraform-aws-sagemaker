@@ -1,7 +1,7 @@
 #
 # MAINTAINER Vitaliy Natarov "vitaliy.natarov@yahoo.com"
 #
-terraform {
+/*terraform {
   required_version = "~> 1.0"
 }
 
@@ -13,9 +13,10 @@ provider "aws" {
 # Get the usera and account information
 data "aws_caller_identity" "current" {
 }
+*/
 
-module "sagemaker" {
-  source      = "../"
+module "aws_sagemaker" {
+  source      = "./aws_sagemaker"
   name        = "TEST"
   environment = "stage"
 
